@@ -21,6 +21,10 @@ exports[`<Header /> should render the heading 1`] = `
   align-items: center;
 }
 
+.c1 button {
+  margin-left: auto;
+}
+
 .c2 {
   margin-left: 8rem;
   height: 8rem;
@@ -105,6 +109,9 @@ exports[`<Header /> should render the heading 1`] = `
         Posts
       </a>
     </nav>
+    <div
+      data-testid="Mock SignInButton"
+    />
   </div>
 </header>
 `;

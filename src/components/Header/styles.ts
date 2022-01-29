@@ -14,6 +14,10 @@ export const Content = styled.div`
 
     display: flex;
     align-items: center;
+
+    button {
+      margin-left: auto;
+    }
   `}
 `;
 

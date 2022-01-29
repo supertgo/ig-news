@@ -1,3 +1,4 @@
+import SignInButton from 'components/SignInButton';
 import * as S from './styles';
 
 const Header = () => (
@@ -8,6 +9,8 @@ const Header = () => (
         <S.Link isActive={true}>Home</S.Link>
         <S.Link>Posts</S.Link>
       </S.Nav>
+
+      <SignInButton isUserLoggedIn={false} />
     </S.Content>
   </S.Wrapper>
 );
