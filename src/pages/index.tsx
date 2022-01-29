@@ -1,5 +1,9 @@
-import Main from 'components/Main'
+import Head from 'next/head';
 
 export default function Home() {
-  return <Main />
+  return (
+    <Head>
+      <title>Inicio | ig.news</title>
+    </Head>
+  );
 }
