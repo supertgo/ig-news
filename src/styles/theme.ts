@@ -27,6 +27,7 @@ export default {
     shape: '#1F2729',
     title: '#E1E1E6',
     text: '#A8A8B3',
+    white: '#FFFFFF',
     background: '#121414'
   },
   spacings: {

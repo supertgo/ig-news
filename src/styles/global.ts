@@ -12,14 +12,19 @@ const GlobalStyles = createGlobalStyle`
      font-size: 62.5%;
    }
 
-   html,
-   body,
-   #__next {
-     height: 100%;
+   body {
+     color: ${theme.colors.white};
+     font-family: ${theme.font.family};
+     background: ${theme.colors.background};
    }
 
-   body {
-     font-family: ${theme.font.family};
+   button {
+     cursor: pointer;
+   }
+
+   a {
+     color: inherit;
+     text-decoration: none;
    }
  `}
 `;
