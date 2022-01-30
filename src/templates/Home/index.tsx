@@ -4,7 +4,14 @@ import Head from 'next/head';
 
 import * as S from './styles';
 
-const Home = () => (
+export type HomeProps = {
+  product: {
+    price_id: string;
+    amount: number;
+  };
+};
+
+const Home = ({ product }: HomeProps) => (
   <>
     <Head>
       <title>Inicio | ig.news</title>
@@ -18,10 +25,10 @@ const Home = () => (
         </S.Title>
         <S.Content>
           Get access to all the publications <br />
-          <S.Span>for $9.90 month</S.Span>
+          <S.Span>for {product.amount} month</S.Span>
         </S.Content>
 
-        <SubscribeButton />
+        <SubscribeButton priceId={product.price_id} />
       </S.Section>
       <S.Image src="/images/avatar.svg" alt="Girl coding" />
     </S.Wrapper>

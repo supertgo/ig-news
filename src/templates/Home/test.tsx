@@ -21,9 +21,16 @@ jest.mock('components/SubscribeButton', () => {
   };
 });
 
+const props = {
+  product: {
+    price_id: 'dada',
+    amount: 10
+  }
+};
+
 describe('<Home />', () => {
   it('should render the heading', () => {
-    const { container } = renderWithTheme(<Home />);
+    const { container } = renderWithTheme(<Home product={props.product} />);
 
     expect(screen.getByText(/Hey, welcome/i)).toBeInTheDocument();
     expect(screen.getByText(/News about the/i)).toBeInTheDocument();
@@ -34,7 +41,6 @@ describe('<Home />', () => {
     expect(
       screen.getByRole('img', { name: /Girl coding/i })
     ).toBeInTheDocument();
-
     expect(screen.getByTestId('Mock Header')).toBeInTheDocument();
     expect(screen.getByTestId('Mock SubscribeButton')).toBeInTheDocument();
 
