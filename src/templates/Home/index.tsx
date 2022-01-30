@@ -1,4 +1,5 @@
 import Header from 'components/Header';
+import SubscribeButton from 'components/SubscribeButton';
 import Head from 'next/head';
 
 import * as S from './styles';
@@ -19,6 +20,8 @@ const Home = () => (
           Get access to all the publications <br />
           <S.Span>for $9.90 month</S.Span>
         </S.Content>
+
+        <SubscribeButton />
       </S.Section>
       <S.Image src="/images/avatar.svg" alt="Girl coding" />
     </S.Wrapper>

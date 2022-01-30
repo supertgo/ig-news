@@ -12,6 +12,15 @@ jest.mock('components/Header', () => {
   };
 });
 
+jest.mock('components/SubscribeButton', () => {
+  return {
+    __esModule: true,
+    default: function Mock() {
+      return <div data-testid="Mock SubscribeButton"></div>;
+    }
+  };
+});
+
 describe('<Home />', () => {
   it('should render the heading', () => {
     const { container } = renderWithTheme(<Home />);
@@ -27,6 +36,7 @@ describe('<Home />', () => {
     ).toBeInTheDocument();
 
     expect(screen.getByTestId('Mock Header')).toBeInTheDocument();
+    expect(screen.getByTestId('Mock SubscribeButton')).toBeInTheDocument();
 
     expect(container.firstChild).toMatchSnapshot();
   });

@@ -17,6 +17,10 @@ export const Image = styled.img``;
 
 export const Section = styled.section`
   max-width: 60rem;
+
+  button {
+    margin-top: 4rem;
+  }
 `;
 
 export const Text = styled.span`

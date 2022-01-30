@@ -39,6 +39,7 @@ exports[`<Header /> should render the heading 1`] = `
   color: #A8A8B3;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
+  font-size: 1.6rem;
 }
 
 .c3 + a {
@@ -74,6 +75,7 @@ exports[`<Header /> should render the heading 1`] = `
   color: #A8A8B3;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
+  font-size: 1.6rem;
 }
 
 .c4 + a {

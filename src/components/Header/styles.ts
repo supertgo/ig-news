@@ -41,6 +41,7 @@ export const Link = styled.a<LinkProps>`
     line-height: 8rem;
     color: ${theme.colors.text};
     transition: color 0.2s;
+    font-size: ${theme.font.sizes.medium};
 
     & + a {
       margin-left: ${theme.spacings.medium};

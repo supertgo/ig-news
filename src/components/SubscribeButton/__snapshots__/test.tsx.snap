@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SubscribeButton /> should render the heading 1`] = `
+.c0 {
+  width: 26rem;
+  height: 6.4rem;
+  border: 0;
+  border-radius: 3.2rem;
+  background: #EBA417;
+  color: #121414;
+  font-size: 2.0rem;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: filter 0.2s;
+  transition: filter 0.2s;
+}
+
+.c0:hover {
+  -webkit-filter: brightness(0.8);
+  filter: brightness(0.8);
+}
+
+<button
+  class="c0"
+>
+  Subscribe Now
+</button>
+`;
