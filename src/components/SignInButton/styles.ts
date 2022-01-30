@@ -32,3 +32,5 @@ export const Wrapper = styled.button`
     }
   `}
 `;
+
+export const Image = styled.img``;

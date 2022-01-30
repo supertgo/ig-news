@@ -6,6 +6,7 @@
   "conventionalCommits.scopes": [
     "components",
     "pages",
-    "stripe"
+    "stripe",
+    "api"
   ]
 }
