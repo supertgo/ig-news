@@ -5,7 +5,8 @@ import { stripe } from 'services/stripe';
 
 export async function saveSubscription(
   subscriptionId: string,
-  customerId: string
+  customerId: string,
+  createdAction = false
 ) {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const userRef = await fauna.query(
@@ -23,7 +24,9 @@ export async function saveSubscription(
   //   price_id: subscription.items.data[0].price.id
   // };
 
-  await fauna.query(
-    q.Create(q.Collection('subscriptions'), { data: subscription })
-  );
+  if (createdAction) {
+    await fauna.query(
+      q.Create(q.Collection('subscriptions'), { data: subscription })
+    );
+  }
 }
