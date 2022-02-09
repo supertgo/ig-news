@@ -1,42 +1,36 @@
 import Head from 'next/head';
 import * as S from './styles';
 
-const Posts = () => (
-  <>
-    <Head>
-      <title>Posts | Ignews</title>
-    </Head>
-    <S.Wrapper>
-      <S.Content>
-        <S.Link>
-          <S.Time>12 de março de 2021</S.Time>
-          <S.Title>Creating a Monorepo with Lerna & Yarn Workspaces</S.Title>
-          <S.Text>
-            In this guide, you will learn how to create a Monorepo to manage
-            multiple packages with a shared build, test, and release process.
-          </S.Text>
-        </S.Link>
+type Post = {
+  slug: string;
+  title: string;
+  excerpt: string;
+  updatedAt: string;
+};
 
-        {/* <S.Link>
-          <S.Time>12 de março de 2021</S.Time>
-          <S.Title>Creating a Monorepo with Lerna & Yarn Workspaces</S.Title>
-          <S.Text>
-            In this guide, you will learn how to create a Monorepo to manage
-            multiple packages with a shared build, test, and release process.
-          </S.Text>
-        </S.Link>
+export type PostsProps = {
+  posts: Post[];
+};
 
-        <S.Link>
-          <S.Time>12 de março de 2021</S.Time>
-          <S.Title>Creating a Monorepo with Lerna & Yarn Workspaces</S.Title>
-          <S.Text>
-            In this guide, you will learn how to create a Monorepo to manage
-            multiple packages with a shared build, test, and release process.
-          </S.Text>
-        </S.Link> */}
-      </S.Content>
-    </S.Wrapper>
-  </>
-);
+const Posts = ({ posts }: PostsProps) => {
+  return (
+    <>
+      <Head>
+        <title>Posts | Ignews</title>
+      </Head>
+      <S.Wrapper>
+        <S.Content>
+          {posts.map(({ updatedAt, title, excerpt, slug }) => (
+            <S.Link key={slug}>
+              <S.Time>{updatedAt}</S.Time>
+              <S.Title>{title}</S.Title>
+              <S.Text>{excerpt}</S.Text>
+            </S.Link>
+          ))}
+        </S.Content>
+      </S.Wrapper>
+    </>
+  );
+};
 
 export default Posts;
