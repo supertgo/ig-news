@@ -1,4 +1,5 @@
 import SignInButton from 'components/SignInButton';
+import Link from 'next/link';
 import * as S from './styles';
 
 const Header = () => (
@@ -6,11 +7,15 @@ const Header = () => (
     <S.Content>
       <S.Image src="/images/logo.svg" alt="ig.news" />
       <S.Nav>
-        <S.Link isActive={true}>Home</S.Link>
-        <S.Link>Posts</S.Link>
+        <Link href="/" passHref>
+          <S.Link isActive={true}>Home</S.Link>
+        </Link>
+        <Link href="/posts" passHref>
+          <S.Link>Posts</S.Link>
+        </Link>
       </S.Nav>
 
-      <SignInButton isUserLoggedIn={false} />
+      <SignInButton />
     </S.Content>
   </S.Wrapper>
 );

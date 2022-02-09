@@ -102,11 +102,13 @@ exports[`<Header /> should render the heading 1`] = `
     >
       <a
         class="c3"
+        href="/"
       >
         Home
       </a>
       <a
         class="c4"
+        href="/posts"
       >
         Posts
       </a>
