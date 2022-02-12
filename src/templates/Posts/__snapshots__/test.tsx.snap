@@ -54,31 +54,38 @@ exports[`<Posts /> should render the heading 1`] = `
   line-height: 2.6rem;
 }
 
-<main
-  class="c0"
+<div
+  class=""
 >
   <div
-    class="c1"
+    data-testid="Mock Header"
+  />
+  <main
+    class="c0"
   >
-    <a
-      class="c2"
+    <div
+      class="c1"
     >
-      <time
-        class="c3"
+      <a
+        class="c2"
       >
-        12 de março de 2021
-      </time>
-      <strong
-        class="c4"
-      >
-        Creating a Monorepo with Lerna & Yarn Workspaces
-      </strong>
-      <p
-        class="c5"
-      >
-        In this guide, you will learn how to create a Monorepo to manage multiple packages with a shared build, test, and release process.
-      </p>
-    </a>
-  </div>
-</main>
+        <time
+          class="c3"
+        >
+          12 de março de 2021
+        </time>
+        <strong
+          class="c4"
+        >
+          Creating a Monorepo with Lerna & Yarn Workspaces
+        </strong>
+        <p
+          class="c5"
+        >
+          In this guide, you will learn how to create a Monorepo to manage multiple packages with a shared build, test, and release process.
+        </p>
+      </a>
+    </div>
+  </main>
+</div>
 `;

@@ -1,7 +1,108 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Home /> should render the heading 1`] = `
+.c0 {
+  max-width: 112rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  height: calc(100vh- 8rem);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c1 {
+  max-width: 60rem;
+}
+
+.c1 button {
+  margin-top: 4rem;
+}
+
+.c2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.c3 {
+  font-size: 7.2rem;
+  line-height: 7.2rem;
+  font-weight: 900;
+  margin-top: 4.0rem;
+}
+
+.c4 {
+  color: #61DCFB;
+}
+
+.c5 {
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+}
+
+.c5 span {
+  font-weight: 600;
+}
+
 <div
-  data-testid="Mock Header"
-/>
+  class=""
+>
+  <div
+    data-testid="Mock Header"
+  />
+  <main
+    class="c0"
+  >
+    <section
+      class="c1"
+    >
+      <span
+        class="c2"
+      >
+        👏 Hey, welcome
+      </span>
+      <h1
+        class="c3"
+      >
+        News about the 
+        <span
+          class="c4"
+        >
+          React
+        </span>
+         world.
+      </h1>
+      <p
+        class="c5"
+      >
+        Get access to all the publications 
+        <br />
+        <span
+          class="c4"
+        >
+          for 
+          10
+           month
+        </span>
+      </p>
+      <div
+        data-testid="Mock SubscribeButton"
+      />
+    </section>
+    <img
+      alt="Girl coding"
+      class=""
+      src="/images/avatar.svg"
+    />
+  </main>
+</div>
 `;

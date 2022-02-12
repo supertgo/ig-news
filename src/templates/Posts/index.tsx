@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import Base from 'templates/Base';
+
 import * as S from './styles';
 
 type Post = {
@@ -18,17 +20,19 @@ const Posts = ({ posts }: PostsProps) => {
       <Head>
         <title>Posts | Ignews</title>
       </Head>
-      <S.Wrapper>
-        <S.Content>
-          {posts.map(({ updatedAt, title, excerpt, slug }) => (
-            <S.Link key={slug}>
-              <S.Time>{updatedAt}</S.Time>
-              <S.Title>{title}</S.Title>
-              <S.Text>{excerpt}</S.Text>
-            </S.Link>
-          ))}
-        </S.Content>
-      </S.Wrapper>
+      <Base>
+        <S.Wrapper>
+          <S.Content>
+            {posts.map(({ updatedAt, title, excerpt, slug }) => (
+              <S.Link key={slug}>
+                <S.Time>{updatedAt}</S.Time>
+                <S.Title>{title}</S.Title>
+                <S.Text>{excerpt}</S.Text>
+              </S.Link>
+            ))}
+          </S.Content>
+        </S.Wrapper>
+      </Base>
     </>
   );
 };

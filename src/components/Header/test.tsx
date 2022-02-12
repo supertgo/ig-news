@@ -12,6 +12,17 @@ jest.mock('components/SignInButton', () => {
   };
 });
 
+jest.mock('next/router', () => ({
+  useRouter() {
+    return {
+      route: '/',
+      pathname: '',
+      query: '',
+      asPath: ''
+    };
+  }
+}));
+
 describe('<Header />', () => {
   it('should render the heading', () => {
     const { container } = renderWithTheme(<Header />);

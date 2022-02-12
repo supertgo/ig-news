@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Base /> should render the heading 1`] = `
+<div
+  class=""
+>
+  <div
+    data-testid="Mock Header"
+  />
+  <h1>
+    Base
+  </h1>
+</div>
+`;

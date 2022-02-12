@@ -1,5 +1,8 @@
 import { screen } from '@testing-library/react';
 import { renderWithTheme } from 'utils/tests/helpers';
+
+import Posts from '.';
+
 const post = {
   slug: 'monorepo-slug',
   title: 'Creating a Monorepo with Lerna & Yarn Workspaces',
@@ -8,7 +11,14 @@ const post = {
   updatedAt: '12 de março de 2021'
 };
 
-import Posts from '.';
+jest.mock('components/Header', () => {
+  return {
+    __esModule: true,
+    default: function Mock() {
+      return <div data-testid="Mock Header"></div>;
+    }
+  };
+});
 
 describe('<Posts />', () => {
   it('should render the heading', () => {
