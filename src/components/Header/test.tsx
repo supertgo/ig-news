@@ -12,25 +12,22 @@ jest.mock('components/SignInButton', () => {
   };
 });
 
-jest.mock('next/router', () => ({
-  useRouter() {
-    return {
-      route: '/',
-      pathname: '',
-      query: '',
-      asPath: ''
-    };
-  }
-}));
+jest.mock('components/ActiveLink', () => {
+  return {
+    __esModule: true,
+    default: function Mock() {
+      return <div data-testid="Mock ActiveLink"></div>;
+    }
+  };
+});
 
 describe('<Header />', () => {
   it('should render the heading', () => {
     const { container } = renderWithTheme(<Header />);
 
     expect(screen.getByRole('img', { name: /ig\.news/i })).toBeInTheDocument();
-    expect(screen.getByText('Home')).toBeInTheDocument();
-    expect(screen.getByText('Posts')).toBeInTheDocument();
     expect(screen.getByTestId('Mock SignInButton')).toBeInTheDocument();
+    expect(screen.getAllByTestId('Mock ActiveLink')).toHaveLength(2);
 
     expect(container.firstChild).toMatchSnapshot();
   });
