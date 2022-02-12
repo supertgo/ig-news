@@ -68,6 +68,7 @@ exports[`<Posts /> should render the heading 1`] = `
     >
       <a
         class="c2"
+        href="/posts/monorepo-slug"
       >
         <time
           class="c3"

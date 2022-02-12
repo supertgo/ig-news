@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Post /> should render the heading 1`] = `
+.c0 {
+  max-width: 112rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.c1 {
+  max-width: 72rem;
+  margin: 8rem auto 0;
+}
+
+.c2 {
+  font-size: 5.6rem;
+  font-weight: 900;
+}
+
+.c3 {
+  display: block;
+  font-size: 1.6rem;
+  color: #A8A8B3;
+  margin-top: 2.4rem;
+}
+
+.c4 {
+  margin-top: 3.2rem;
+  line-height: 3.2rem;
+  font-size: 1.8rem;
+  color: #A8A8B3;
+}
+
+.c4 p,
+.c4 ul {
+  margin: 2.4rem;
+}
+
+.c4 ul {
+  padding-left: 2.4rem;
+}
+
+.c4 ul li {
+  margin: 0.8rem 0;
+}
+
+<div
+  class=""
+>
+  <div
+    data-testid="Mock Header"
+  />
+  <main
+    class="c0"
+  >
+    <article
+      class="c1"
+    >
+      <h1
+        class="c2"
+      >
+        Visões inovadoras do código livre e do open source no desenvolvimento da
+      </h1>
+      <time
+        class="c3"
+      >
+        06 de fevereiro de 2022
+      </time>
+      <div
+        class="c4"
+      >
+        Iniciativas de código aberto e softwares livres foram responsáveis em moldar o principal meio de comunicação moderno
+      </div>
+    </article>
+  </main>
+</div>
+`;

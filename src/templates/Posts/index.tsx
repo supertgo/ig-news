@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import Base from 'templates/Base';
 
 import * as S from './styles';
@@ -24,11 +25,13 @@ const Posts = ({ posts }: PostsProps) => {
         <S.Wrapper>
           <S.Content>
             {posts.map(({ updatedAt, title, excerpt, slug }) => (
-              <S.Link key={slug}>
-                <S.Time>{updatedAt}</S.Time>
-                <S.Title>{title}</S.Title>
-                <S.Text>{excerpt}</S.Text>
-              </S.Link>
+              <Link key={slug} href={`/posts/${slug}`} passHref>
+                <S.Link>
+                  <S.Time>{updatedAt}</S.Time>
+                  <S.Title>{title}</S.Title>
+                  <S.Text>{excerpt}</S.Text>
+                </S.Link>
+              </Link>
             ))}
           </S.Content>
         </S.Wrapper>
