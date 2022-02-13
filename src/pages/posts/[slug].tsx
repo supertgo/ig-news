@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { GetServerSideProps } from 'next';
-// import { getSession } from 'next-auth/react';
+import { getSession } from 'next-auth/react';
 import { RichText } from 'prismic-dom';
 import { ParsedUrlQuery } from 'querystring';
 
@@ -20,10 +20,18 @@ export const getServerSideProps: GetServerSideProps = async ({
   req,
   params
 }) => {
-  //const session = await getSession({ req });
+  const session = await getSession({ req });
+
+  if (!session.activeSubscription) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false
+      }
+    };
+  }
   const paramsWithUrl = params as Params;
   const { slug } = paramsWithUrl;
-
   const prismic = getPrismicClient(req);
   const response = await prismic.getByUID<any>('post', String(slug), {});
   const post = {
